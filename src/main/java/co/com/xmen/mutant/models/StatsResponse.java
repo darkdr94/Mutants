@@ -50,8 +50,9 @@ public class StatsResponse {
 		super();
 		this.countMutantDna = countMutantDna;
 		this.countHumanDna = countHumanDna;
-		this.ratio = (countHumanDna > 0) ? Double.toString(countMutantDna / (double) countHumanDna) : "undefined";
-
+		this.ratio = (countHumanDna > 0)
+				? Double.toString(Math.floor((countMutantDna / (double) countHumanDna) * 100) / 100)
+				: "undefined";
 	}
 
 	/**
