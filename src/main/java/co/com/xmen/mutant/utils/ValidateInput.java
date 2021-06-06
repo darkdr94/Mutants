@@ -21,6 +21,9 @@ public class ValidateInput {
 	 */
 	@Value("${app.sequence.length}")
 	private int sequenceSize;
+	
+	@Value("${app.max.matriz.size}")
+	private int maxMatrizSize;
 
 	/**
 	 * Método que valida que el parametro de entrada corresponda a una matriz de
@@ -41,7 +44,7 @@ public class ValidateInput {
 		String[] dna = dnaInput.getDna();
 		int dnaArraySize = dna.length;
 		boolean response = true;
-		if (dnaArraySize < sequenceSize) {
+		if (dnaArraySize < sequenceSize || dnaArraySize > maxMatrizSize) {
 			return false;
 		}
 		for (String sequence : dna) {
