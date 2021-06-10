@@ -75,6 +75,13 @@ Servicio HTTP GET que permite obtener las estadísticas de verificaciones de las
 - Framework: Springboot
 - Base de Datos: Cloud Firestore (Google)
 
+### Ejecución local
+
+1. Descargar o clonar el proyecto.
+2. Crear el archivo de credenciales de GCP en: `/resources/firestorekeys.json` (Ver mas adelante la sección **Archivo de credenciales de Google Cloud Platform (GCP)**).
+3. Importar o abrir el proyecto con el IDE de su preferencia.
+4. Iniciar la ejecución del programa con Spring Boot.
+
 ### Variables de entorno
 
 Las variables de entorno se configuran dentro del archivo `/resources/application.properties`
